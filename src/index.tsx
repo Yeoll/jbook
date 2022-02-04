@@ -15,7 +15,6 @@ const App = () => {
       wasmURL: "/esbuild.wasm",
     });
   };
-
   useEffect(() => {
     startService();
   }, []);
@@ -35,6 +34,8 @@ const App = () => {
         global: "window",
       },
     });
+
+    // console.log(result);
 
     setCode(result.outputFiles[0].text);
   };
